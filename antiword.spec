@@ -1,12 +1,12 @@
 Summary:	MSWord Document to TXT/Postscript converter
 Summary(pl):	Konwerter dokumentów MSWord do TXT/Postscript
 Name:		antiword
-Version:	0.33
-Release:	2
+Version:	0.34
+Release:	1
 License:	GPL
 Group:		Applications/Text
 Source0:	http://www.winfield.demon.nl/linux/%{name}-%{version}.tar.gz
-# Source0-md5:	e2178402066bbb1f5b3a49d47316a1fc
+# Source0-md5:	1de2f16edd5a0fc566e9bae588719d7d
 Patch0:		%{name}-etc_dir.patch
 URL:		http://www.winfield.demon.nl/index.html
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
