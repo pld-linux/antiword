@@ -1,15 +1,13 @@
 Summary:	MSWord Document to TXT/Postscript converter
-Summary(pl):	Konwerter domumentów MSWord do TXT/Postscript
+Summary(pl):	Konwerter dokumentów MSWord do TXT/Postscript
 Name:		antiword
-Version:	0.31
+Version:	0.34
 Release:	1
 License:	GPL
 Group:		Applications/Text
-Group(de):	Applikationen/Text
-Group(fr):	Utilitaires/Texte
-Group(pl):	Aplikacje/Tekst
 Source0:	http://www.winfield.demon.nl/linux/%{name}-%{version}.tar.gz
-Patch0:		%{name}-opt.patch
+# Source0-md5:	1de2f16edd5a0fc566e9bae588719d7d
+Patch0:		%{name}-etc_dir.patch
 URL:		http://www.winfield.demon.nl/index.html
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -19,35 +17,33 @@ converts the documents from Word 6, 7, 97 and 2000 to text and
 Postscript. Antiword tries to keep the layout of the document intact.
 
 %description -l pl
-Antiword to darmowy czytnik dokumentów M$-Word dla Linuxa, BeOS i RISC
-OS. Konwertuje on dokumenty z Worda 6,7, 97 oraz 2000 do tekstu oraz
+Antiword to darmowy czytnik dokumentów MS-Word dla Linuksa, BeOS i RISC
+OS. Konwertuje on dokumenty z Worda 6, 7, 97 oraz 2000 do tekstu oraz
 Postscriptu. Antiword próbuje utrzymaæ formê dokumentu nietkniêt±.
 
 %prep
-%setup -q -n %{name}.%{version}
-%patch0 -p1
+%setup -q
+%patch -p1
 
 %build
-OPT="%{?debug:-O0 -g}%{!?debug:$RPM_OPT_FLAGS}" %{__make}
+%{__make} \
+	CC="%{__cc}" \
+	OPT="%{rpmcflags}"
 
 %install
 rm -rf $RPM_BUILD_ROOT
+install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man1,%{_datadir}/antiword}
 
-install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man1}
-
-install %{name}		$RPM_BUILD_ROOT%{_bindir}
+install %{name} k%{name} $RPM_BUILD_ROOT%{_bindir}
 install Docs/*.1	$RPM_BUILD_ROOT%{_mandir}/man1
-
-rm -f Docs/*.1
-mv -f Resources .antiword
-
-gzip -9nf Docs/*
+install Resources/*	$RPM_BUILD_ROOT%{_datadir}/antiword
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc Docs/*.gz .antiword
+%doc Docs/{ChangeLog,Exmh,FAQ,History,Mutt,Netscape,QandA,ReadMe}
 %attr(755,root,root) %{_bindir}/*
+%{_datadir}/antiword
 %{_mandir}/man*/*
