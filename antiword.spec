@@ -7,7 +7,7 @@ License:	GPL
 Group:		Applications/Text
 Source0:	http://www.winfield.demon.nl/linux/%{name}-%{version}.tar.gz
 # Source0-md5:	e2178402066bbb1f5b3a49d47316a1fc
-Patch0:   %{name}-etc_dir.patch
+Patch0:		%{name}-etc_dir.patch
 URL:		http://www.winfield.demon.nl/index.html
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
