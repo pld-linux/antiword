@@ -1,0 +1,281 @@
+diff -Nur antiword.0.31.orig/Resources/fontnames antiword.0.31/Resources/fontnames
+--- antiword.0.31.orig/Resources/fontnames	Thu Jan  1 01:00:00 1970
++++ antiword.0.31/Resources/fontnames	Wed Feb 14 23:31:17 2001
+@@ -0,0 +1,109 @@
++# Default fontnames translation table
++# uses only Standard PostScript (TM) fonts
++#
++# MS-Word fontname,	Italic,	Bold,	PostScript fontname,	Special
++Arial,			0,	0,	Helvetica,		0
++Arial,			0,	1,	Helvetica-Bold,		0
++Arial,			1,	0,	Helvetica-Oblique,	0
++Arial,			1,	1,	Helvetica-BoldOblique,	0
++Arial Black,		0,	0,	Helvetica,		0
++Arial Black,		0,	1,	Helvetica-Bold,		0
++Arial Black,		1,	0,	Helvetica-Oblique,	0
++Arial Black,		1,	1,	Helvetica-BoldOblique,	0
++Arial CE,		0,	0,	Helvetica,		0
++Arial CE,		0,	1,	Helvetica-Bold,		0
++Arial CE,		1,	0,	Helvetica-Oblique,	0
++Arial CE,		1,	1,	Helvetica-BoldOblique,	0
++Arial Narrow,		0,	0,	Helvetica-Narrow,	0
++Arial Narrow,		0,	1,	Helvetica-Narrow-Bold,	0
++Arial Narrow,		1,	0,	Helvetica-Narrow-Oblique,	0
++Arial Narrow,		1,	1,	Helvetica-Narrow-BoldOblique,	0
++AvantGarde,		0,	0,	AvantGarde-Book,	0
++AvantGarde,		0,	1,	AvantGarde-Demi,	0
++AvantGarde,		1,	0,	AvantGarde-BookOblique,	0
++AvantGarde,		1,	1,	AvantGarde-DemiOblique,	0
++Bookman Old Style,	0,	0,	Bookman-Light,		0
++Bookman Old Style,	0,	1,	Bookman-Demi,		0
++Bookman Old Style,	1,	0,	Bookman-LightItalic,	0
++Bookman Old Style,	1,	1,	Bookman-DemiItalic,	0
++Century Schoolbook,	0,	0,	NewCenturySchlbk-Roman,	0
++Century Schoolbook,	0,	1,	NewCenturySchlbk-Bold,	0
++Century Schoolbook,	1,	0,	NewCenturySchlbk-Italic,	0
++Century Schoolbook,	1,	1,	NewCenturySchlbk-BoldItalic,	0
++Comic Sans MS,		0,	0,	Helvetica,		0
++Comic Sans MS,		0,	1,	Helvetica-Bold,		0
++Comic Sans MS,		1,	0,	Helvetica-Oblique,	0
++Comic Sans MS,		1,	1,	Helvetica-BoldOblique,	0
++Courier,		0,	0,	Courier,		0
++Courier,		0,	1,	Courier-Bold,		0
++Courier,		1,	0,	Courier-Oblique,	0
++Courier,		1,	1,	Courier-BoldOblique,	0
++Courier New,		0,	0,	Courier,		0
++Courier New,		0,	1,	Courier-Bold,		0
++Courier New,		1,	0,	Courier-Oblique,	0
++Courier New,		1,	1,	Courier-BoldOblique,	0
++Fixedsys,		0,	0,	Courier,		0
++Fixedsys,		0,	1,	Courier-Bold,		0
++Fixedsys,		1,	0,	Courier-Oblique,	0
++Fixedsys,		1,	1,	Courier-BoldOblique,	0
++Helvetica,		0,	0,	Helvetica,		0
++Helvetica,		0,	1,	Helvetica-Bold,		0
++Helvetica,		1,	0,	Helvetica-Oblique,	0
++Helvetica,		1,	1,	Helvetica-BoldOblique,	0
++Helvetica-Narrow,	0,	0,	Helvetica-Narrow,	0
++Helvetica-Narrow,	0,	1,	Helvetica-Narrow-Bold,	0
++Helvetica-Narrow,	1,	0,	Helvetica-Narrow-Oblique,	0
++Helvetica-Narrow,	1,	1,	Helvetica-Narrow-BoldOblique,	0
++ITC Bookman,		0,	0,	Bookman-Light,		0
++ITC Bookman,		0,	1,	Bookman-Demi,		0
++ITC Bookman,		1,	0,	Bookman-LightItalic,	0
++ITC Bookman,		1,	1,	Bookman-DemiItalic,	0
++Lucida Console,	0,	0,	Courier,		0
++Lucida Console,	0,	1,	Courier-Bold,		0
++Lucida Console,	1,	0,	Courier-Oblique,	0
++Lucida Console,	1,	1,	Courier-BoldOblique,	0
++Monotype.com,		0,	0,	Courier,		0
++Monotype.com,		0,	1,	Courier-Bold,		0
++Monotype.com,		1,	0,	Courier-Oblique,	0
++Monotype.com,		1,	1,	Courier-BoldOblique,	0
++MS Sans Serif,		0,	0,	Helvetica,		0
++MS Sans Serif,		0,	1,	Helvetica-Bold,		0
++MS Sans Serif,		1,	0,	Helvetica-Oblique,	0
++MS Sans Serif,		1,	1,	Helvetica-BoldOblique,	0
++New Century Schlbk,	0,	0,	NewCenturySchlbk-Roman,	0
++New Century Schlbk,	0,	1,	NewCenturySchlbk-Bold,	0
++New Century Schlbk,	1,	0,	NewCenturySchlbk-Italic,	0
++New Century Schlbk,	1,	1,	NewCenturySchlbk-BoldItalic,	0
++NewCenturySchlbk,	0,	0,	NewCenturySchlbk-Roman,	0
++NewCenturySchlbk,	0,	1,	NewCenturySchlbk-Bold,	0
++NewCenturySchlbk,	1,	0,	NewCenturySchlbk-Italic,	0
++NewCenturySchlbk,	1,	1,	NewCenturySchlbk-BoldItalic,	0
++Palatino,		0,	0,	Palatino-Roman,		0
++Palatino,		0,	1,	Palatino-Bold,		0
++Palatino,		1,	0,	Palatino-Italic,	0
++Palatino,		1,	1,	Palatino-BoldItalic,	0
++Swiss,			0,	0,	Helvetica,		0
++Swiss,			0,	1,	Helvetica-Bold,		0
++Swiss,			1,	0,	Helvetica-Oblique,	0
++Swiss,			1,	1,	Helvetica-BoldOblique,	0
++Tahoma,			0,	0,	Helvetica,		0
++Tahoma,			0,	1,	Helvetica-Bold,		0
++Tahoma,			1,	0,	Helvetica-Oblique,	0
++Tahoma,			1,	1,	Helvetica-BoldOblique,	0
++Trebuchet MS,		0,	0,	Helvetica,		0
++Trebuchet MS,		0,	1,	Helvetica-Bold,		0
++Trebuchet MS,		1,	0,	Helvetica-Oblique,	0
++Trebuchet MS,		1,	1,	Helvetica-BoldOblique,	0
++Univers,		0,	0,	Helvetica,		0
++Univers,		0,	1,	Helvetica-Bold,		0
++Univers,		1,	0,	Helvetica-Oblique,	0
++Univers,		1,	1,	Helvetica-BoldOblique,	0
++Verdana,		0,	0,	Helvetica,		0
++Verdana,		0,	1,	Helvetica-Bold,		0
++Verdana,		1,	0,	Helvetica-Oblique,	0
++Verdana,		1,	1,	Helvetica-BoldOblique,	0
++# All the other fonts
++*,			0,	0,	Times-Roman,		0
++*,			0,	1,	Times-Bold,		0
++*,			1,	0,	Times-Italic,		0
++*,			1,	1,	Times-BoldItalic,	0
+diff -Nur antiword.0.31.orig/antiword.h antiword.0.31/antiword.h
+--- antiword.0.31.orig/antiword.h	Wed Nov 29 20:54:14 2000
++++ antiword.0.31/antiword.h	Wed Feb 14 23:31:17 2001
+@@ -131,17 +131,19 @@
+ #define TABLE_FONT		"Courier"
+ /* The name of the antiword directory */
+ #if defined(__dos)
+-#define ANTIWORD_DIR		"antiword"
++#define HOME_ANTIWORD_DIR	"antiword"
++#define SYS_ANTIWORD_DIR	"antiword"
+ #define FONT_BASENAME		"fontname.txt"
+ #else
+-#define ANTIWORD_DIR		".antiword"
++#define HOME_ANTIWORD_DIR	".antiword"
++#define SYS_ANTIWORD_DIR	"/usr/share/antiword"
+ #define FONT_BASENAME		"fontnames"
+ #endif /* __dos */
+ /* The name of the font information file */
+-#define FONTNAMES_FILE		ANTIWORD_DIR FILE_SEPARATOR FONT_BASENAME
++#define FONTNAMES_FILE		FONT_BASENAME
+ /* The name of the default mapping file */
+-#define MAPPING_FILE_DEFAULT_1	ANTIWORD_DIR FILE_SEPARATOR "8859-1.txt"
+-#define MAPPING_FILE_DEFAULT_2	ANTIWORD_DIR FILE_SEPARATOR "8859-2.txt"
++#define MAPPING_FILE_DEFAULT_1	"8859-1.txt"
++#define MAPPING_FILE_DEFAULT_2	"8859-2.txt"
+ #endif /* __riscos */
+ 
+ /* Prototypes */
+@@ -286,6 +288,7 @@
+ extern char	*unincpy(char *, const char *, size_t);
+ extern size_t	unilen(const char *);
+ extern const char	*szBasename(const char *);
++extern int	ConfFilePath(char *,int,const char *);
+ /* notes.c */
+ extern void	vDestroyNotesInfoLists(void);
+ extern void	vGetNotesInfo(FILE *, const pps_info_type *,
+diff -Nur antiword.0.31.orig/fonts_u.c antiword.0.31/fonts_u.c
+--- antiword.0.31.orig/fonts_u.c	Wed Nov 29 20:53:05 2000
++++ antiword.0.31/fonts_u.c	Wed Feb 14 23:31:17 2001
+@@ -142,19 +142,15 @@
+ pOpenFontTableFile(void)
+ {
+ 	FILE	*pFile;
+-	const char	*szHome;
+ 	int	iIndex;
+ 	BOOL	bFailed;
+ 	char	szFontNamesFile[PATH_MAX+1];
+-	
+-	szHome = szGetHomeDirectory();
+-	if (strlen(szHome) + sizeof(FONTNAMES_FILE) >=
+-						sizeof(szFontNamesFile)) {
++
++	if (ConfFilePath(szFontNamesFile, sizeof(szFontNamesFile), FONTNAMES_FILE)) {
+ 		werr(0, "The name of your HOME directory is too long");
+ 		return NULL;
+ 	}
+ 
+-	sprintf(szFontNamesFile, "%s%s", szHome, FILE_SEPARATOR FONTNAMES_FILE);
+ 	DBG_MSG(szFontNamesFile);
+ 
+ 	pFile = fopen(szFontNamesFile, "r");
+diff -Nur antiword.0.31.orig/misc.c antiword.0.31/misc.c
+--- antiword.0.31.orig/misc.c	Tue Nov 21 07:48:12 2000
++++ antiword.0.31/misc.c	Wed Feb 14 23:32:35 2001
+@@ -676,3 +676,33 @@
+ 	}
+ 	return ++szTmp;
+ } /* end of szBasename */
++
++int ConfFilePath(char *str,int maxlen,const char *fname)
++{
++	const char *szHome;
++	struct stat statbuf;
++	int	homeok=0;
++
++	szHome=szGetHomeDirectory();
++	if (strlen(szHome) < maxlen - 2*sizeof(FILE_SEPARATOR) - strlen(fname)
++			- sizeof(HOME_ANTIWORD_DIR)) {
++		sprintf(str, "%s" FILE_SEPARATOR HOME_ANTIWORD_DIR
++			FILE_SEPARATOR "%s",szHome,fname);
++		homeok=1;
++		if(!stat(str,&statbuf))
++			return 0;
++	}
++	/* file not present in home directory - use global one */
++	if(sizeof(SYS_ANTIWORD_DIR) + sizeof(FILE_SEPARATOR) + strlen(fname) > maxlen)
++		return -1;
++	sprintf(str,SYS_ANTIWORD_DIR FILE_SEPARATOR "%s",fname);
++	if(!stat(str,&statbuf))
++		return 0;
++	/* file not present in global directory - fallback to home, maybe we can make it... */
++	if(homeok) {
++		sprintf(str, "%s" FILE_SEPARATOR HOME_ANTIWORD_DIR
++			FILE_SEPARATOR "%s",szHome,fname);
++		return 0;
++	} else
++		return -1;
++}
+diff -Nur antiword.0.31.orig/options.c antiword.0.31/options.c
+--- antiword.0.31.orig/options.c	Wed Nov 29 20:52:36 2000
++++ antiword.0.31/options.c	Wed Feb 14 23:31:17 2001
+@@ -98,7 +98,6 @@
+ 	extern	char	*optarg;
+ 	extern int	optind;
+ 	const papersize_type	*pPaperSize;
+-	const char	*szHome;
+ 	char	*pcChar, *szTmp;
+ 	int	iChar;
+ 	BOOL	bPostScript, bFound;
+@@ -179,15 +178,10 @@
+ 		}
+ 	}
+ /* Command line */
+-	szHome = szGetHomeDirectory();
+-	if (strlen(szHome) >= sizeof(szMappingFile) -
+-			sizeof(FILE_SEPARATOR) -
+-			sizeof(MAPPING_FILE_DEFAULT_1)) {
++	if(ConfFilePath(szMappingFile, sizeof(szMappingFile), MAPPING_FILE_DEFAULT_1)) {
+ 		werr(0, "The name of your home directory is too long");
+ 		return -1;
+ 	}
+-	sprintf(szMappingFile, "%s" FILE_SEPARATOR MAPPING_FILE_DEFAULT_1,
+-		szHome);
+ 	bPostScript = FALSE;
+ 	while ((iChar = getopt(argc, argv, "LX:hi:m:p:stw:")) != -1) {
+ 		switch (iChar) {
+@@ -199,15 +193,13 @@
+ 			switch (iTmp) {
+ 			case 1:
+ 				tOptionsCurr.eEncoding = encoding_iso_8859_1;
+-				sprintf(szMappingFile,
+-				"%s" FILE_SEPARATOR MAPPING_FILE_DEFAULT_1,
+-					szHome);
++				ConfFilePath(szMappingFile, sizeof(szMappingFile),
++					MAPPING_FILE_DEFAULT_1);
+ 				break;
+ 			case 2:
+ 				tOptionsCurr.eEncoding = encoding_iso_8859_2;
+-				sprintf(szMappingFile,
+-				"%s" FILE_SEPARATOR MAPPING_FILE_DEFAULT_2,
+-					szHome);
++				ConfFilePath(szMappingFile, sizeof(szMappingFile),
++					MAPPING_FILE_DEFAULT_2);
+ 				break;
+ 			default:
+ 				break;
+@@ -242,18 +234,11 @@
+ 			break;
+ 		case 'm':
+ 			if (optarg[0] == '/') {
+-				if (strlen(optarg) < sizeof(szMappingFile)) {
++				if (strlen(optarg) < sizeof(szMappingFile))
+ 					strcpy(szMappingFile, optarg);
+-				}
+ 			} else {
+-				if (strlen(szHome) + strlen(optarg) <
+-						sizeof(szMappingFile) -
+-						sizeof(ANTIWORD_DIR) -
+-						2 * sizeof(FILE_SEPARATOR)) {
+-					sprintf(szMappingFile,
+-			"%s" FILE_SEPARATOR ANTIWORD_DIR FILE_SEPARATOR "%s",
+-						szHome, optarg);
+-				}
++				ConfFilePath(szMappingFile, sizeof(szMappingFile),
++					optarg);
+ 			}
+ 			DBG_MSG(szMappingFile);
+ 			break;
