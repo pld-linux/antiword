@@ -30,7 +30,7 @@ Postscriptu. Antiword próbuje utrzymaæ formê dokumentu nietkniêt±.
 %patch1 -p1
 
 %build
-OPT="%{?debug:-O0 -g}%{!?debug:$RPM_OPT_FLAGS}" %{__make}
+OPT="%{rpmcflags}" %{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
