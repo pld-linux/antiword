@@ -1,0 +1,24 @@
+diff -urN antiword.0.31.org/Makefile antiword.0.31/Makefile
+--- antiword.0.31.org/Makefile	Sun Jan 14 12:45:47 2001
++++ antiword.0.31/Makefile	Sun Jan 14 12:46:03 2001
+@@ -10,7 +10,7 @@
+ 
+ LDLIBS	=
+ 
+-CFLAGS	= -Wall -pedantic -O2 -D$(DB)
++CFLAGS	= -Wall -pedantic $(OPT) -D$(DB)
+ LDFLAGS	=
+ 
+ OBJS	=\
+diff -urN antiword.0.31.org/Makefile.Linux antiword.0.31/Makefile.Linux
+--- antiword.0.31.org/Makefile.Linux	Sun Jan 14 12:45:47 2001
++++ antiword.0.31/Makefile.Linux	Sun Jan 14 12:46:03 2001
+@@ -10,7 +10,7 @@
+ 
+ LDLIBS	=
+ 
+-CFLAGS	= -Wall -pedantic -O2 -D$(DB)
++CFLAGS	= -Wall -pedantic $(OPT) -D$(DB)
+ LDFLAGS	=
+ 
+ OBJS	=\
