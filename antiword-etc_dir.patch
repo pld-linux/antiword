@@ -9,83 +9,50 @@ diff -Nru antiword-0.33/antiword.h antiword-0.33.new/antiword.h
  #define FONTNAMES_FILE		"fontnames"
  #endif /* __dos */
  /* The name of the default mapping file */
-diff -Nru antiword-0.33/options.c antiword-0.33.new/options.c
---- antiword-0.33/options.c	Sat Jun 29 12:43:05 2002
-+++ antiword-0.33.new/options.c	Sat Mar 22 21:34:50 2003
-@@ -295,22 +295,42 @@
- 				PS_LEFT_MARGIN + PS_RIGHT_MARGIN));
- 		DBG_DEC(tOptionsCurr.iParagraphBreak);
+--- antiword-0.36/options.c.orig	2004-10-08 20:54:36.000000000 +0200
++++ antiword-0.36/options.c	2004-11-06 22:29:52.401338432 +0100
+@@ -216,6 +216,24 @@
  	}
--	/* Try the local version of the mapping file */
--	szHome = szGetHomeDirectory();
--	if (strlen(szHome) + strlen(szLeafname) <
--	    sizeof(szMappingFile) -
--	    sizeof(ANTIWORD_DIR) -
--	    2 * sizeof(FILE_SEPARATOR)) {
--		sprintf(szMappingFile,
--			"%s" FILE_SEPARATOR ANTIWORD_DIR FILE_SEPARATOR "%s",
--			szHome, szLeafname);
--		DBG_MSG(szMappingFile);
--		if (bReadCharacterMappingTable(szMappingFile)) {
--			return optind;
--		}
--	} else {
--		werr(0, "Local mappingfilename too long, ignored");
--	}
-+  szHome = getenv("HOME_ETC");
-+  if (szHome) {
-+	  if (strlen(szHome) + strlen(szLeafname) <
-+	      sizeof(szMappingFile) -
-+	      sizeof(ETC_DIR_ANTIWORD_DIR) -
-+	      2 * sizeof(FILE_SEPARATOR)) {
-+		  sprintf(szMappingFile,
-+			  "%s" FILE_SEPARATOR ETC_DIR_ANTIWORD_DIR FILE_SEPARATOR "%s",
-+			  szHome, szLeafname);
-+		  DBG_MSG(szMappingFile);
-+		  if (bReadCharacterMappingTable(szMappingFile)) {
-+			  return optind;
-+		  }
-+	  } else {
-+		  werr(0, "Local mappingfilename too long, ignored");
-+      
-+	  }
-+  } else {
-+	  /* Try the local version of the mapping file */
-+	  szHome = szGetHomeDirectory();
-+	  if (strlen(szHome) + strlen(szLeafname) <
-+	      sizeof(szMappingFile) -
-+	      sizeof(ANTIWORD_DIR) -
-+	      2 * sizeof(FILE_SEPARATOR)) {
-+		  sprintf(szMappingFile,
-+			  "%s" FILE_SEPARATOR ANTIWORD_DIR FILE_SEPARATOR "%s",
-+			  szHome, szLeafname);
-+		  DBG_MSG(szMappingFile);
-+		  if (bReadCharacterMappingTable(szMappingFile)) {
-+			  return optind;
-+		  }
-+	  } else {
-+		  werr(0, "Local mappingfilename too long, ignored");
-+      
-+	  }
-+  }
- 	/* Try the global version of the mapping file */
- 	if (strlen(szLeafname) <
+ 
+ 	/* Try the local version of the mapping file */
++    szHome = getenv("HOME_ETC");
++    if (szHome) {
++	if (strlen(szHome) + tFilenameLen <
++	    sizeof(szMappingFile) -
++	    sizeof(ETC_DIR_ANTIWORD_DIR) -
++	    2 * sizeof(FILE_SEPARATOR)) {
++		sprintf(szMappingFile,
++			"%s" FILE_SEPARATOR ETC_DIR_ANTIWORD_DIR FILE_SEPARATOR "%s%s",
++			szHome, szLeafname, szSuffix);
++		DBG_MSG(szMappingFile);
++		pFile = fopen(szMappingFile, "r");
++		if (pFile != NULL) {
++			return pFile;
++		}
++	} else {
++		werr(0, "Local mappingfilename too long, ignored");
++	}
++    } else {
+ 	szHome = szGetHomeDirectory();
+ 	if (strlen(szHome) + tFilenameLen <
  	    sizeof(szMappingFile) -
-@@ -326,9 +346,14 @@
+@@ -232,6 +250,7 @@
+ 	} else {
+ 		werr(0, "Local mappingfilename too long, ignored");
+ 	}
++    }
+ 
+ 	/* Try the global version of the mapping file */
+ 	if (tFilenameLen <
+@@ -249,6 +268,11 @@
  	} else {
  		werr(0, "Global mappingfilename too long, ignored");
  	}
--	werr(0, "I can't open your mapping file (%s)\n"
--		"It is not in '%s" FILE_SEPARATOR ANTIWORD_DIR "' nor in '"
--		GLOBAL_ANTIWORD_DIR "'.", szLeafname, szHome);
-+  if (getenv("HOME_ETC") != NULL)
-+	  werr(0, "I can't open your mapping file (%s)\n"
-+		  "It is not in '%s" FILE_SEPARATOR ETC_DIR_ANTIWORD_DIR "' nor in '"
-+		  GLOBAL_ANTIWORD_DIR "'.", szLeafname, szHome);
-+	else
-+    werr(0, "I can't open your mapping file (%s)\n"
-+		  "It is not in '%s" FILE_SEPARATOR ANTIWORD_DIR "' nor in '"
-+		  GLOBAL_ANTIWORD_DIR "'.", szLeafname, szHome);
- 	return -1;
- #endif /* __riscos */
- } /* end of iReadOptions */
++   if (getenv("HOME_ETC") != NULL)
++	werr(0, "I can't open your mapping file (%s%s)\n"
++		"It is not in '%s" FILE_SEPARATOR ETC_DIR_ANTIWORD_DIR "' nor in '"
++		GLOBAL_ANTIWORD_DIR "'.", szLeafname, szSuffix, szHome);
++   else
+ 	werr(0, "I can't open your mapping file (%s%s)\n"
+ 		"It is not in '%s" FILE_SEPARATOR ANTIWORD_DIR "' nor in '"
+ 		GLOBAL_ANTIWORD_DIR "'.", szLeafname, szSuffix, szHome);
