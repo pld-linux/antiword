@@ -5,7 +5,7 @@ diff -Nru antiword-0.33/antiword.h antiword-0.33.new/antiword.h
  #else	/* All others */
  #define GLOBAL_ANTIWORD_DIR	"/usr/share/antiword"
  #define ANTIWORD_DIR		".antiword"
-+#define ETC_DIR_ANTIWORD_DIR "antiword"
++#define ETC_DIR_ANTIWORD_DIR	".antiword"
  #define FONTNAMES_FILE		"fontnames"
  #endif /* __dos */
  /* The name of the default mapping file */
@@ -32,7 +32,7 @@ diff -Nru antiword-0.33/options.c antiword-0.33.new/options.c
 -	} else {
 -		werr(0, "Local mappingfilename too long, ignored");
 -	}
-+  szHome = getenv("ETC_DIR");
++  szHome = getenv("HOME_ETC");
 +  if (szHome) {
 +	  if (strlen(szHome) + strlen(szLeafname) <
 +	      sizeof(szMappingFile) -
@@ -78,7 +78,7 @@ diff -Nru antiword-0.33/options.c antiword-0.33.new/options.c
 -	werr(0, "I can't open your mapping file (%s)\n"
 -		"It is not in '%s" FILE_SEPARATOR ANTIWORD_DIR "' nor in '"
 -		GLOBAL_ANTIWORD_DIR "'.", szLeafname, szHome);
-+  if (getenv("ETC_DIR") != NULL)
++  if (getenv("HOME_ETC") != NULL)
 +	  werr(0, "I can't open your mapping file (%s)\n"
 +		  "It is not in '%s" FILE_SEPARATOR ETC_DIR_ANTIWORD_DIR "' nor in '"
 +		  GLOBAL_ANTIWORD_DIR "'.", szLeafname, szHome);

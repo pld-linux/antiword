@@ -26,7 +26,9 @@ Postscriptu. Antiword próbuje utrzymaæ formê dokumentu nietkniêt±.
 %patch -p1
 
 %build
-%{__make} OPT="%{rpmcflags}" CC="%{__cc}"
+%{__make} \
+	CC="%{__cc}" \
+	OPT="%{rpmcflags}"
 
 %install
 rm -rf $RPM_BUILD_ROOT
