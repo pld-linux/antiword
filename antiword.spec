@@ -9,6 +9,7 @@ Group(de):	Applikationen/Text
 Group(fr):	Utilitaires/Texte
 Group(pl):	Aplikacje/Tekst
 Source0:	http://www.winfield.demon.nl/linux/%{name}-%{version}.tar.gz
+Patch0:		%{name}-path.patch
 URL:		http://www.winfield.demon.nl/index.html
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -24,6 +25,7 @@ Postscriptu. Antiword próbuje utrzymaæ formê dokumentu nietkniêt±.
 
 %prep
 %setup -q -n %{name}.%{version}
+%patch0 -p1
 
 %build
 OPT="%{rpmcflags}" %{__make}
