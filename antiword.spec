@@ -6,7 +6,7 @@ Release:	2
 License:	GPL
 Group:		Applications/Text
 Source0:	http://www.winfield.demon.nl/linux/%{name}-%{version}.tar.gz
-Patch0:   %{name}-home_etc.patch
+Patch0:   %{name}-etc_dir.patch
 URL:		http://www.winfield.demon.nl/index.html
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
