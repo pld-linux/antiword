@@ -16,7 +16,7 @@ converts the documents from Word 6, 7, 97 and 2000 to text and
 Postscript. Antiword tries to keep the layout of the document intact.
 
 %description -l pl
-Antiword to darmowy czytnik dokumentów MS-Word dla Linuxa, BeOS i RISC
+Antiword to darmowy czytnik dokumentów MS-Word dla Linuksa, BeOS i RISC
 OS. Konwertuje on dokumenty z Worda 6, 7, 97 oraz 2000 do tekstu oraz
 Postscriptu. Antiword próbuje utrzymaæ formê dokumentu nietkniêt±.
 
