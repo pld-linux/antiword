@@ -5,9 +5,6 @@ Version:	0.32
 Release:	1
 License:	GPL
 Group:		Applications/Text
-Group(de):	Applikationen/Text
-Group(fr):	Utilitaires/Texte
-Group(pl):	Aplikacje/Tekst
 Source0:	http://www.winfield.demon.nl/linux/%{name}-%{version}.tar.gz
 Patch0:		%{name}-path.patch
 URL:		http://www.winfield.demon.nl/index.html
