@@ -1,25 +1,27 @@
 Summary:	MSWord Document to TXT/Postscript converter
 Summary(pl):	Konwerter dokumentów MSWord do TXT/Postscript
 Name:		antiword
-Version:	0.36.1
+Version:	0.37
 Release:	1
 License:	GPL
 Group:		Applications/Text
 Source0:	http://www.winfield.demon.nl/linux/%{name}-%{version}.tar.gz
-# Source0-md5:	d46107219f4afaee658647a49dc45ed9
+# Source0-md5:	f868e2a269edcbc06bf77e89a55898d1
 Patch0:		%{name}-etc_dir.patch
 URL:		http://www.winfield.demon.nl/index.html
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 Antiword is a free MS-Word reader for Linux, BeOS and RISC OS. It
-converts the documents from Word 6, 7, 97 and 2000 to text and
-Postscript. Antiword tries to keep the layout of the document intact.
+converts the documents from Word 2, 6, 7, 97, 2000, 2002 and 2003 to
+text and Postscript. Antiword tries to keep the layout of the document
+intact.
 
 %description -l pl
 Antiword to darmowy czytnik dokumentów MS-Word dla Linuksa, BeOS i RISC
-OS. Konwertuje on dokumenty z Worda 6, 7, 97 oraz 2000 do tekstu oraz
-Postscriptu. Antiword próbuje utrzymaæ formê dokumentu nietkniêt±.
+OS. Konwertuje on dokumenty z Worda 2, 6, 7, 97, 2000, 2002 oraz 2003
+do tekstu oraz Postscriptu. Antiword próbuje utrzymaæ formê dokumentu
+nietkniêt±.
 
 %prep
 %setup -q
