@@ -1,5 +1,5 @@
 Summary:	MSWord Document to TXT/Postscript converter
-Summary(pl.UTF-8):   Konwerter dokumentów MSWord do TXT/Postscript
+Summary(pl.UTF-8):	Konwerter dokumentów MSWord do TXT/Postscript
 Name:		antiword
 Version:	0.37
 Release:	1
