@@ -30,6 +30,7 @@ nietkniętą.
 %build
 %{__make} \
 	CC="%{__cc}" \
+	LD="%{__cc}" \
 	OPT="%{rpmcflags}" \
 	LDFLAGS="%{rpmcflags} %{rpmldflags}"
 
@@ -37,7 +38,8 @@ nietkniętą.
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man1,%{_datadir}/antiword}
 
-install %{name} k%{name} $RPM_BUILD_ROOT%{_bindir}
+install %{name} $RPM_BUILD_ROOT%{_bindir}
+install Unix-only/KDE3-only/kantiword.sh $RPM_BUILD_ROOT%{_bindir}/k%{name}
 install Docs/*.1	$RPM_BUILD_ROOT%{_mandir}/man1
 install Resources/*	$RPM_BUILD_ROOT%{_datadir}/antiword
 
