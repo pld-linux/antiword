@@ -30,7 +30,8 @@ nietkniętą.
 %build
 %{__make} \
 	CC="%{__cc}" \
-	OPT="%{rpmcflags}"
+	OPT="%{rpmcflags}" \
+	LDFLAGS="%{rpmldflags}"
 
 %install
 rm -rf $RPM_BUILD_ROOT
